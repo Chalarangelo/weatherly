@@ -25,6 +25,12 @@ html {
           animation: sunnyAnimation 1.2s ease infinite;
 }
 
+@-webkit-keyframes cloudyAnimation {
+  50% {
+    background: #b0bec5;
+  }
+}
+
 @keyframes cloudyAnimation {
   50% {
     background: #b0bec5;
@@ -52,4 +58,61 @@ html {
   border-radius: 1.5rem;
   -webkit-animation: cloudyAnimation 1.2s ease-in infinite;
           animation: cloudyAnimation 1.2s ease-in infinite;
+}
+
+@-webkit-keyframes rainyAnimation {
+  60% {
+    top: -0.25rem;
+    opacity: 0;
+  }
+  61% {
+    top: -1.5rem;
+  }
+}
+
+@keyframes rainyAnimation {
+  60% {
+    top: -0.25rem;
+    opacity: 0;
+  }
+  61% {
+    top: -1.5rem;
+  }
+}
+
+.rainy {
+  display: block;
+  background: #b0bec5;
+  width: 2.5rem;
+  height: 1.25rem;
+  border-radius: 0.75rem;
+  margin-top: 1rem;
+
+}
+.rainy:before {
+  display: block;
+  content: '';
+  width: 1.75rem;
+  height: 1.75rem;
+  position: relative;
+  top: -0.5rem;
+  border-radius: 1.5rem;
+  background: #b0bec5;
+}
+
+.rainy:after {
+  display: block;
+  content :'';
+  border: 4px dotted #b0bec5;
+  border-radius: 4px;
+  border-left: 0;
+  border-right: 0;
+  position: relative;
+  left: 0.625rem;
+  top: -1.5rem;
+  width: 1.25rem;
+  height: 0.3125rem;
+  transform: rotate(3deg);
+  -webkit-animation: rainyAnimation 1.2s linear infinite;
+          animation: rainyAnimation 1.2s linear infinite;
 }
