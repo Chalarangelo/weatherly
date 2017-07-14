@@ -1,0 +1,55 @@
+html {
+  font-size: 16px;
+}
+
+@-webkit-keyframes sunnyAnimation {
+  50% {
+    box-shadow: 0.0625rem 0.0625rem 0.25rem 0.125rem rgba(253, 216, 53, 0.75);
+  }
+}
+
+@keyframes sunnyAnimation {
+  50% {
+    box-shadow: 0.0625rem 0.0625rem 0.25rem 0.125rem rgba(253, 216, 53, 0.75);
+  }
+}
+
+.sunny {
+  display: block;
+  background: #ffeb3b;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  box-shadow: 0.0625rem 0.0625rem 0.5rem 0.125rem rgba(251, 192, 45, 0.8);
+  -webkit-animation: sunnyAnimation 1.2s ease infinite;
+          animation: sunnyAnimation 1.2s ease infinite;
+}
+
+@keyframes cloudyAnimation {
+  50% {
+    background: #b0bec5;
+  }
+}
+
+.cloudy {
+  display: block;
+  background: #cfd8dc;
+  width: 2.5rem;
+  height: 1.25rem;
+  border-radius: 0.75rem;
+  margin-top: 1rem;
+  -webkit-animation: cloudyAnimation 1.2s ease-in infinite;
+          animation: cloudyAnimation 1.2s ease-in infinite;
+}
+.cloudy:before {
+  display: block;
+  content: '';
+  background: #cfd8dc;
+  width: 1.75rem;
+  height: 1.75rem;
+  position: relative;
+  top: -0.5rem;
+  border-radius: 1.5rem;
+  -webkit-animation: cloudyAnimation 1.2s ease-in infinite;
+          animation: cloudyAnimation 1.2s ease-in infinite;
+}
